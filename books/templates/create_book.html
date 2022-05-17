@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Create Books  for {{ author.name }}</h1>
+
+<button type="button" hx-get="{% url 'book-form' %}" hx-target="#bookforms" hx-swap="beforeend">
+        Add form
+</button>
+<div id="bookforms"></div>
+{% endblock %}
